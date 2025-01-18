@@ -19,14 +19,10 @@ def break_program():
     exit(0)
 
 def get_layout():
-    global user32
-
     curr_window = user32.GetForegroundWindow()
     thread_id = user32.GetWindowThreadProcessId(curr_window, 0)
-# Made up of 0xAAABBBB, AAA = HKL (handle object) & BBBB = language ID
     klid = user32.GetKeyboardLayout(thread_id)
-    #print(klid)
-    lang_id = klid&1023#00000011_11111111 = 0x03FF
+    lang_id = klid&1023#last 10 bits sign  00000011_11111111 = 0x03FF = 1023
     return hex(lang_id)
 
 prevSymb = '\0'
