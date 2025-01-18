@@ -12,7 +12,7 @@ def switch_ignroe():
     text = "ŝaltis"
     if ignore:
         text = "malŝaltis"
-    handle = pywintypes.HANDLE()
+    handle = user32.GetForegroundWindow()
     g.MessageBox(handle, "Esperanta klavaro {0}".format(text), "Klavara informo", int('00000040', 16))
 def break_program():
     handle = user32.GetForegroundWindow()
@@ -36,7 +36,7 @@ symbs = "gjuhcs"
 symbMap = {'g':'ĝ', 'j':'ĵ', 'u': 'ŭ', 'h':'ĥ', 'c':'ĉ', 's':'ŝ'}
 
 keyboard.add_hotkey('ctrl+alt+2', switch_ignroe)
-keyboard.add_hotkey('ctrl+alt+3', break_program)
+#keyboard.add_hotkey('ctrl+alt+3', break_program)
 while True:
     try:
         event = keyboard.read_event()
