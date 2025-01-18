@@ -1,7 +1,6 @@
 import keyboard
 import win32.win32gui as g
 import ctypes
-import pywintypes
 
 user32 = ctypes.WinDLL('user32', use_last_error=True)
 ignore = False
