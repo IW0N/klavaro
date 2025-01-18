@@ -22,7 +22,7 @@ def get_layout():
     curr_window = user32.GetForegroundWindow()
     thread_id = user32.GetWindowThreadProcessId(curr_window, 0)
     klid = user32.GetKeyboardLayout(thread_id)
-    lang_id = klid&1023#last 10 bits sign  00000011_11111111 = 0x03FF = 1023
+    lang_id = klid&1023#last 10 bits sign language id. 00000011_11111111 = 0x03FF = 1023
     return hex(lang_id)
 
 prevSymb = '\0'
@@ -54,7 +54,7 @@ while True:
             keyboard.press_and_release('backspace')
             newKey = symbMap[prevSymb.lower()]
             if isUpper:
-                newKey = newKey.upper()#ŭ
+                newKey = newKey.upper()
             keyboard.write(newKey)
             prevSymb = '\0'
         else:
