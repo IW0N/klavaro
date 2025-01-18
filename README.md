@@ -2,7 +2,7 @@
 ## Esperanta pricribo
 Klavaro estas simpla apliko por traduko de x-notacio al esperanta literojn. Ekzemple: ux -> ŭ, cx -> ĉ, sx -> ŝ, gx -> ĝ ktp.
 Al ŝalti/malŝalti traduko, premu ctrl+alt+2.
-Atento! Tio apliko estas uzabla antaŭ, vi eniras tekstoj meme, ne usante kopiadon, enmeton kaj nekonsekvenca ŝangon.
+Atento! Tio apliko estas uzebla nur se, vi eniras tekstoj meme, ne uzante kopiadon, enmeton kaj nekonsekvenca ŝangon.
 Mi forte rekomendas meti ĉi tion al
 C:\Users\Your username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 ## English description
